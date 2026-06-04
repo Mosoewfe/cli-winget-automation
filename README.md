@@ -27,6 +27,8 @@ The script should work without administrator privileges, but running `run.bat` a
 
 This is my first Python project, so feedback, suggestions, and contributions are always welcome.
 
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+
 Thanks,
 
 Amelia
