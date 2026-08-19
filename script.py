@@ -27,7 +27,7 @@ while True:
         case 2:
             name = input("pls give a name for software:\n")
             subprocess.run(
-                ["winget", "uninstall", name, "--silent", "--purge", "--force"]
+                ["winget", "uninstall", name, "--silent","--all-versions", "--purge", "--force"]
             )
             break
         case 3:
