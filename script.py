@@ -27,7 +27,10 @@ def safe_name(prompt):
 # Main menu loop — only accept 1, 2 or 3.
 while True:
     choice = ask(
-        "what would you like to do?\n" "1. install\n" "2. uninstall\n" "3. upgrade\n"
+        "what would you like to do?\n"
+        "1. install\n"
+        "2. uninstall\n"
+        "3. upgrade\n"
     )
     if choice in ("1", "2", "3"):
         break
@@ -35,16 +38,16 @@ while True:
 
 match int(choice):
     case 1:
-        safe_name("pls give a name for software to search:\n")
-        name = safe_name("pls give a name for software to install:\n")
+        search_term = safe_name("pls give a name for software to search:\n")
         subprocess.run(
             [
                 "winget",
                 "search",
                 "-q",
-                name,
+                search_term,
             ]
         )
+        name = safe_name("pls give a name for software to install:\n")
         subprocess.run(
             [
                 "winget",
